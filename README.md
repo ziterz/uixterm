@@ -41,14 +41,13 @@ dependencies:
 
 For complete documentation, API reference, and usage examples, visit:
 
-[UiXTerm Documentation](docs/index.md)
+[UiXTerm Documentation](doc/index.md)
 
 The documentation includes:
 
-* Introduction
-* Installation guide
-* API reference
-* Examples
-* FAQ
-* Roadmap
-
+- Introduction
+- Installation guide
+- API reference
+- Examples
+- FAQ
+- Roadmap
