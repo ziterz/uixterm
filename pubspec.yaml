@@ -1,0 +1,23 @@
+name: uixterm
+
+description: A Dart library for ANSI terminal colors, styles, backgrounds, and text formatting.
+
+version: 0.1.0
+
+
+environment:
+  sdk: ^3.9.0
+
+topics:
+  - terminal
+  - ansi
+  - console
+  - cli
+  - formatting
+
+dependencies: {}
+
+dev_dependencies:
+  lints: ^5.1.1
+  test: ^1.25.0
+  dartdoc: ^8.3.3

@@ -1,0 +1,67 @@
+# -----------------------------------------------------------------------------
+# UiXTerm
+# ANSI Terminal Formatting Library for Dart
+#
+# File:
+#   analysis_options.yaml
+#
+# Description:
+#   Defines static analysis and lint rules for the project.
+#
+# Since:
+#   0.1.0
+# -----------------------------------------------------------------------------
+
+include: package:lints/recommended.yaml
+
+
+analyzer:
+  exclude:
+    - build/**
+
+
+linter:
+  rules:
+
+    # -------------------------------------------------------------------------
+    # Documentation
+    # -------------------------------------------------------------------------
+
+    # Requires documentation comments for public APIs.
+    public_member_api_docs: true
+
+
+    # -------------------------------------------------------------------------
+    # Code Quality
+    # -------------------------------------------------------------------------
+
+    # Prefer final variables when possible.
+    prefer_final_locals: true
+
+    # Prefer final fields when they are never reassigned.
+    prefer_final_fields: true
+
+
+    # -------------------------------------------------------------------------
+    # Style
+    # -------------------------------------------------------------------------
+
+    # Require braces in control flow statements.
+    curly_braces_in_flow_control_structures: true
+
+    # Prefer single quotes.
+    prefer_single_quotes: true
+
+    # Require trailing commas where appropriate.
+    require_trailing_commas: true
+
+
+    # -------------------------------------------------------------------------
+    # Documentation Style
+    # -------------------------------------------------------------------------
+
+    # Require valid documentation references.
+    comment_references: true
+
+
+  
