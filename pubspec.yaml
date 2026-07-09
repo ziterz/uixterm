@@ -4,6 +4,11 @@ description: A Dart library for ANSI terminal colors, styles, backgrounds, and t
 
 version: 0.1.0
 
+repository: https://github.com/ziterz/uixterm
+
+homepage: https://github.com/ziterz/uixterm
+
+issue_tracker: https://github.com/ziterz/uixterm/issues
 
 environment:
   sdk: ^3.9.0
