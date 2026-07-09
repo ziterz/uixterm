@@ -24,6 +24,7 @@
 import 'ansi_colors.dart';
 import 'ansi_reset.dart';
 import 'ansi_styles.dart';
+import 'ansi_backgrounds.dart';
 
 /// ANSI text formatting helpers.
 ///
@@ -37,7 +38,7 @@ class AnsiText {
   AnsiText._();
 
   // ===========================================================================
-  // Colors
+  // Colors (foreground colors)
   // ===========================================================================
 
   /// Returns text with a red foreground color.
@@ -70,6 +71,16 @@ class AnsiText {
     return '${AnsiColors.magenta}$text${AnsiReset.reset}';
   }
 
+  /// Returns text with a black foreground color.
+  static String black(String text) {
+    return '${AnsiColors.black}$text${AnsiReset.reset}';
+  }
+
+  /// Returns text with a white foreground color.
+  static String white(String text) {
+    return '${AnsiColors.white}$text${AnsiReset.reset}';
+  }
+
   // ===========================================================================
   // Styles
   // ===========================================================================
@@ -87,6 +98,65 @@ class AnsiText {
   /// Returns underlined text.
   static String underline(String text) {
     return '${AnsiStyles.underlineOn}$text${AnsiStyles.underlineOff}';
+  }
+
+  /// Returns blinking text.
+  static String blink(String text) {
+    return '${AnsiStyles.blinkOn}$text${AnsiStyles.blinkOff}';
+  }
+
+  /// Returns inverse colors text.
+  static String inverse(String text) {
+    return '${AnsiStyles.inverseOn}$text${AnsiStyles.inverseOff}';
+  }
+
+  /// Returns hidden text.
+  static String hidden(String text) {
+    return '${AnsiStyles.hiddenOn}$text${AnsiStyles.hiddenOff}';
+  }
+
+  // ===========================================================================
+  // colors (Background Colors)
+  // ===========================================================================
+
+  /// Returns text with a red background color.
+  static String bgRed(String text) {
+    return '${AnsiBackgrounds.red}$text${AnsiReset.reset}';
+  }
+
+  /// Returns text with a green background color.
+  static String bgGreen(String text) {
+    return '${AnsiBackgrounds.green}$text${AnsiReset.reset}';
+  }
+
+  /// Returns text with a blue background color.
+  static String bgBlue(String text) {
+    return '${AnsiBackgrounds.blue}$text${AnsiReset.reset}';
+  }
+
+  /// Returns text with a black background color.
+  static String bgBlack(String text) {
+    return '${AnsiBackgrounds.black}$text${AnsiReset.reset}';
+  }
+
+  /// Returns text with a Yellow background color.
+  static String bgYellow(String text) {
+    return '${AnsiBackgrounds.yellow}$text${AnsiReset.reset}';
+  }
+
+  /// Returns text with a magenta background color.
+  static String bgMagenta(String text) {
+    return '${AnsiBackgrounds.magenta}$text${AnsiReset.reset}';
+  }
+
+  /// Returns text with a cyan background color.
+  static String bgCyan(String text) {
+    return '${AnsiBackgrounds.cyan}$text${AnsiReset.reset}';
+  }
+
+  /// Returns text with a white background color.
+  static String bgWhite(String text) {
+    return '${AnsiBackgrounds.white}$text${AnsiReset.reset}';
   }
 
   // ===========================================================================

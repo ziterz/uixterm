@@ -36,3 +36,19 @@ Add UiXTerm to your project dependencies:
 dependencies:
   uixterm: ^0.1.0
 ```
+
+## Documentation
+
+For complete documentation, API reference, and usage examples, visit:
+
+[UiXTerm Documentation](docs/index.md)
+
+The documentation includes:
+
+* Introduction
+* Installation guide
+* API reference
+* Examples
+* FAQ
+* Roadmap
+
