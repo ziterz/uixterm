@@ -11,9 +11,11 @@ UiXTerm is a Dart library that simplifies ANSI terminal formatting.
 It provides an easy way to add:
 
 - Text colors
-- Background colors
-- Text styles
-- Formatted terminal messages
+- Background colors.
+- 256 ANSI pallete colors.
+- ANSI RGB colors.
+- Text styles.
+- Formatted terminal messages.
 
 without manually writing ANSI escape sequences.
 
@@ -69,7 +71,7 @@ AnsiColors.red
 AnsiReset.reset
 ```
 
-When using low-level classes manually, you should reset the formatting yourself.
+But, when using low-level classes manually, you should reset the formatting yourself.
 
 Example:
 
@@ -80,6 +82,8 @@ print(
   '${AnsiReset.reset}',
 );
 ```
+
+Note: all Ansi Constants using in this libray are String type.
 
 ---
 
@@ -110,9 +114,9 @@ Use:
 
 # Can I combine colors and styles?
 
-Yes.
+Yes, you can :
 
-Use `AnsiText.style()`:
+please use `AnsiText.style()` for advanced formating :
 
 ```dart
 print(
@@ -163,17 +167,9 @@ AnsiText.red('Error')
 
 ---
 
-# Does UiXTerm support RGB colors?
+# Does UiXTerm support RGB or 256-pallete colors?
 
-Not in version `0.1.0`.
-
-The current version focuses on standard ANSI colors.
-
-Future versions may include:
-
-- ANSI 256 colors
-- TrueColor RGB
-- Extended terminal features
+yes, in the version 1.0.0 .
 
 ---
 
@@ -181,15 +177,9 @@ Future versions may include:
 
 No.
 
-UiXTerm only handles text formatting.
+UiXTerm was made like a lightweight tool, that only handles text formatting.
 
-Terminal control features such as:
-
-- Cursor movement
-- Screen clearing
-- Progress bars
-
-are planned for future versions.
+in the future the Helvox Ecosystem will be improve features like these.
 
 ---
 
@@ -201,14 +191,18 @@ UiXTerm is a normal Dart package and can be added as a dependency:
 
 ```yaml
 dependencies:
-  uixterm: ^0.1.0
+  uixterm: ^1.0.0
 ```
+
+and import from pub dev repository using the command: dart pub get
 
 ---
 
 # Where can I report issues?
 
 Issues and feature requests can be submitted through the project repository.
+
+or send an email to developers: `azureobsidiantile@gmail.com`
 
 ---
 

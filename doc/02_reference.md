@@ -6,10 +6,12 @@ UiXTerm organizes ANSI terminal formatting into simple and descriptive classes.
 
 Available classes:
 
+- `AnsiReset`
 - `AnsiColors`
 - `AnsiBackgrounds`
 - `AnsiStyles`
-- `AnsiReset`
+- `Ansi256`
+- `AnsiRgb`
 - `AnsiText`
 
 ---
@@ -36,16 +38,16 @@ void main() {
 
 Available colors:
 
-| Constant | Description |
-|---|---|
-| `black` | Black text |
-| `red` | Red text |
-| `green` | Green text |
-| `yellow` | Yellow text |
-| `blue` | Blue text |
+| Constant  | Description  |
+| --------- | ------------ |
+| `black`   | Black text   |
+| `red`     | Red text     |
+| `green`   | Green text   |
+| `yellow`  | Yellow text  |
+| `blue`    | Blue text    |
 | `magenta` | Magenta text |
-| `cyan` | Cyan text |
-| `white` | White text |
+| `cyan`    | Cyan text    |
+| `white`   | White text   |
 
 ---
 
@@ -66,16 +68,16 @@ print(
 
 Available backgrounds:
 
-| Constant | Description |
-|---|---|
-| `black` | Black background |
-| `red` | Red background |
-| `green` | Green background |
-| `yellow` | Yellow background |
-| `blue` | Blue background |
+| Constant  | Description        |
+| --------- | ------------------ |
+| `black`   | Black background   |
+| `red`     | Red background     |
+| `green`   | Green background   |
+| `yellow`  | Yellow background  |
+| `blue`    | Blue background    |
 | `magenta` | Magenta background |
-| `cyan` | Cyan background |
-| `white` | White background |
+| `cyan`    | Cyan background    |
+| `white`   | White background   |
 
 ---
 
@@ -95,20 +97,20 @@ print(
 
 Available styles:
 
-| Constant | Description |
-|---|---|
-| `boldOn` | Enable bold text |
-| `boldOff` | Disable bold text |
-| `italicOn` | Enable italic text |
-| `italicOff` | Disable italic text |
-| `underlineOn` | Enable underline |
-| `underlineOff` | Disable underline |
-| `blinkOn` | Enable blinking |
-| `blinkOff` | Disable blinking |
-| `inverseOn` | Enable inverse colors |
-| `inverseOff` | Disable inverse colors |
-| `hiddenOn` | Hide text |
-| `hiddenOff` | Show hidden text |
+| Constant       | Description            |
+| -------------- | ---------------------- |
+| `boldOn`       | Enable bold text       |
+| `boldOff`      | Disable bold text      |
+| `italicOn`     | Enable italic text     |
+| `italicOff`    | Disable italic text    |
+| `underlineOn`  | Enable underline       |
+| `underlineOff` | Disable underline      |
+| `blinkOn`      | Enable blinking        |
+| `blinkOff`     | Disable blinking       |
+| `inverseOn`    | Enable inverse colors  |
+| `inverseOff`   | Disable inverse colors |
+| `hiddenOn`     | Hide text              |
+| `hiddenOff`    | Show hidden text       |
 
 ---
 
@@ -130,9 +132,9 @@ print(
 
 Available commands:
 
-| Constant | Description |
-|---|---|
-| `reset` | Reset all ANSI formatting |
+| Constant | Description               |
+| -------- | ------------------------- |
+| `reset`  | Reset all ANSI formatting |
 
 ---
 
@@ -156,16 +158,16 @@ print(
 
 Available methods:
 
-| Method | Description |
-|---|---|
-| `black()` | Black text |
-| `red()` | Red text |
-| `green()` | Green text |
-| `yellow()` | Yellow text |
-| `blue()` | Blue text |
+| Method      | Description  |
+| ----------- | ------------ |
+| `black()`   | Black text   |
+| `red()`     | Red text     |
+| `green()`   | Green text   |
+| `yellow()`  | Yellow text  |
+| `blue()`    | Blue text    |
 | `magenta()` | Magenta text |
-| `cyan()` | Cyan text |
-| `white()` | White text |
+| `cyan()`    | Cyan text    |
+| `white()`   | White text   |
 
 Example:
 
@@ -188,16 +190,16 @@ print(
 
 Available methods:
 
-| Method | Description |
-|---|---|
-| `bgBlack()` | Black background |
-| `bgRed()` | Red background |
-| `bgGreen()` | Green background |
-| `bgYellow()` | Yellow background |
-| `bgBlue()` | Blue background |
+| Method        | Description        |
+| ------------- | ------------------ |
+| `bgBlack()`   | Black background   |
+| `bgRed()`     | Red background     |
+| `bgGreen()`   | Green background   |
+| `bgYellow()`  | Yellow background  |
+| `bgBlue()`    | Blue background    |
 | `bgMagenta()` | Magenta background |
-| `bgCyan()` | Cyan background |
-| `bgWhite()` | White background |
+| `bgCyan()`    | Cyan background    |
+| `bgWhite()`   | White background   |
 
 Example:
 
@@ -205,6 +207,106 @@ Example:
 print(
   AnsiText.bgYellow('Warning'),
 );
+```
+
+---
+
+# Ansi256
+
+Provides ANSI 256-color escape sequences.
+
+## Foreground
+
+```dart
+Ansi256.fore(int color)
+```
+
+Returns an ANSI foreground color using the 256-color palette.
+
+**Parameters**
+
+| Parameter | Type | Description          |
+| --------- | ---- | -------------------- |
+| color     | int  | Color index (0–255). |
+
+**Example**
+
+```dart
+print('${Ansi256.fore(196)}Hello${AnsiReset.reset}');
+```
+
+---
+
+## Background
+
+```dart
+Ansi256.back(int color)
+```
+
+Returns an ANSI background color using the 256-color palette.
+
+**Parameters**
+
+| Parameter | Type | Description          |
+| --------- | ---- | -------------------- |
+| color     | int  | Color index (0–255). |
+
+**Example**
+
+```dart
+print('${Ansi256.back(33)}Hello${AnsiReset.reset}');
+```
+
+---
+
+# AnsiRgb
+
+Provides ANSI True Color (24-bit RGB) escape sequences.
+
+## Foreground
+
+```dart
+AnsiRgb.fore(int r, int g, int b)
+```
+
+Returns an ANSI foreground color using RGB values.
+
+**Parameters**
+
+| Parameter | Type | Description            |
+| --------- | ---- | ---------------------- |
+| r         | int  | Red channel (0–255).   |
+| g         | int  | Green channel (0–255). |
+| b         | int  | Blue channel (0–255).  |
+
+**Example**
+
+```dart
+print('${AnsiRgb.fore(255, 120, 0)}Hello${AnsiReset.reset}');
+```
+
+---
+
+## Background
+
+```dart
+AnsiRgb.back(int r, int g, int b)
+```
+
+Returns an ANSI background color using RGB values.
+
+**Parameters**
+
+| Parameter | Type | Description            |
+| --------- | ---- | ---------------------- |
+| r         | int  | Red channel (0–255).   |
+| g         | int  | Green channel (0–255). |
+| b         | int  | Blue channel (0–255).  |
+
+**Example**
+
+```dart
+print('${AnsiRgb.back(40, 40, 40)}Hello${AnsiReset.reset}');
 ```
 
 ---
@@ -221,14 +323,14 @@ print(
 
 Available methods:
 
-| Method | Description |
-|---|---|
-| `bold()` | Bold text |
-| `italic()` | Italic text |
-| `underline()` | Underlined text |
-| `blink()` | Blinking text |
-| `inverse()` | Inverted foreground and background |
-| `hidden()` | Hidden text |
+| Method        | Description                        |
+| ------------- | ---------------------------------- |
+| `bold()`      | Bold text                          |
+| `italic()`    | Italic text                        |
+| `underline()` | Underlined text                    |
+| `blink()`     | Blinking text                      |
+| `inverse()`   | Inverted foreground and background |
+| `hidden()`    | Hidden text                        |
 
 ---
 
@@ -261,11 +363,11 @@ print(
 
 Parameters:
 
-| Parameter | Description |
-|---|---|
-| `color` | Foreground ANSI color |
+| Parameter    | Description           |
+| ------------ | --------------------- |
+| `color`      | Foreground ANSI color |
 | `background` | Background ANSI color |
-| `style` | ANSI text style |
+| `style`      | ANSI text style       |
 
 ---
 

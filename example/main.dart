@@ -106,4 +106,8 @@ void main() {
   print('======================================');
   print('           Demo Finished');
   print('======================================');
+
+  print(AnsiText.foreRgb('RGB Color', 255, 100, 0));
+
+  print(AnsiText.fore256('256 Color', 196));
 }

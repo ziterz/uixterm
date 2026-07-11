@@ -25,6 +25,8 @@ import 'ansi_colors.dart';
 import 'ansi_reset.dart';
 import 'ansi_styles.dart';
 import 'ansi_backgrounds.dart';
+import 'ansi_rgb.dart';
+import 'ansi_256.dart';
 
 /// ANSI text formatting helpers.
 ///
@@ -191,6 +193,42 @@ class AnsiText {
     return '${color ?? ''}'
         '${background ?? ''}'
         '${style ?? ''}'
+        '$text'
+        '${AnsiReset.reset}';
+  }
+
+  // ===========================================================================
+  // 256 Colors
+  // ===========================================================================
+
+  /// Returns text with ANSI 256 foreground color.
+  static String fore256(String text, int color) {
+    return '${Ansi256.fore(color)}'
+        '$text'
+        '${AnsiReset.reset}';
+  }
+
+  /// Returns text with ANSI 256 background color.
+  static String back256(String text, int color) {
+    return '${Ansi256.back(color)}'
+        '$text'
+        '${AnsiReset.reset}';
+  }
+
+  // ===========================================================================
+  // RGB True Color
+  // ===========================================================================
+
+  /// Returns text with RGB foreground color.
+  static String foreRgb(String text, int r, int g, int b) {
+    return '${AnsiRgb.fore(r, g, b)}'
+        '$text'
+        '${AnsiReset.reset}';
+  }
+
+  /// Returns text with RGB background color.
+  static String backRgb(String text, int r, int g, int b) {
+    return '${AnsiRgb.back(r, g, b)}'
         '$text'
         '${AnsiReset.reset}';
   }

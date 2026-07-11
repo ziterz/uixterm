@@ -18,10 +18,12 @@ The goal of UiXTerm is to make terminal interfaces and CLI applications easier t
 
 Current features:
 
-- ANSI foreground colors.
-- ANSI background colors.
-- Text formatting styles.
-- Individual ANSI reset controls.
+- ANSI foreground basic colors (magenta, cyan, black, white, red, blue, green, yellow).
+- ANSI background basic colors (magenta, cyan, black, white, red, blue, green, yellow).
+- ANSI 256 pallete colors (foreground and background).
+- ANSI true colors 24-bit RGB (foreground and background).
+- Text formatting styles (bolded, underlined, blinked, italic, dimmed, inversed, hidden)
+- Individual ANSI reset controls or reset all formats (AnsiReset.reset)
 - Helper methods for formatted messages.
 - Static API without object instantiation.
 - Null-safe Dart implementation.
@@ -34,7 +36,7 @@ Add UiXTerm to your project dependencies:
 
 ```yaml
 dependencies:
-  uixterm: ^0.1.0
+  uixterm: ^1.0.0
 ```
 
 ## Documentation

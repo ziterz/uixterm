@@ -6,6 +6,23 @@ The format is based on
 [Keep a Changelog](https://keepachangelog.com/),
 and this project follows Semantic Versioning.
 
+## 1.0.0 - Stable
+
+### Added
+
+- Helper methods for support RGB and 256 pallete colors .
+- ANSI RGB text color support .
+- ANSI 256-pallete text color Support.
+- Reference documentation for the new functions and helpers.
+
+### Changed
+
+- The roadmap, faq, and reference .md in '/doc' has changed to the new features and real scope of the library.
+
+### Improved
+
+- Completed text formatting API.
+- Improved documentation.
 
 ## 0.1.0 - Initial Release
 

@@ -59,4 +59,32 @@ void main() {
       expect(result, equals('\x1B[31mError\x1B[0m'));
     });
   });
+
+  group('AnsiRgb tests', () {
+    test('rgb color 255,0,0 should be the same', () {
+      expect(AnsiRgb.fore(255, 0, 0), equals('\x1B[38;2;255;0;0m'));
+    });
+
+    test('rgb color 0,300,0 should be reformated to 0,255,0', () {
+      expect(AnsiRgb.fore(0, 300, 0), equals('\x1B[38;2;0;255;0m'));
+    });
+
+    test('rgb color -10,0,0 should be reformated to 0,0,0', () {
+      expect(AnsiRgb.fore(-10, 0, 0), equals('\x1B[38;2;0;0;0m'));
+    });
+  });
+
+  group('Ansi256 tests', () {
+    test('256pallete color 128 should be the same', () {
+      expect(Ansi256.fore(128), equals('\x1B[38;5;128m'));
+    });
+
+    test('256pallete color -10 should be reformated to 0', () {
+      expect(Ansi256.fore(-10), equals('\x1B[38;5;0m'));
+    });
+
+    test('256pallete color 500 should be reformated to 255', () {
+      expect(Ansi256.fore(500), equals('\x1B[38;5;255m'));
+    });
+  });
 }
