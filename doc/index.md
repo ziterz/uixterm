@@ -12,19 +12,15 @@ UiXTerm provides an intuitive API for styling terminal output using ANSI escape 
 
 Learn what UiXTerm is, its goals, supported platforms, and the philosophy behind the project.
 
-**File:** `00_introduction.md`
-
 ---
 
-### 01. Installation
+### [01. Installation](./01_installatiom.md)
 
 Install UiXTerm, import the package, and write your first program.
 
-**File:** `01_installation.md`
-
 ---
 
-### 02. API Reference
+### [02. API Reference](./02_reference.md)
 
 Complete reference for every public class included in UiXTerm.
 
@@ -36,11 +32,9 @@ Includes:
 - AnsiReset
 - AnsiText
 
-**File:** `02_reference.md`
-
 ---
 
-### 03. Examples
+### [03. Examples](03_examples.md)
 
 Practical examples demonstrating common terminal formatting techniques.
 
@@ -52,11 +46,9 @@ Examples include:
 - Multiple style combinations
 - Success, warning and error messages
 
-**File:** `03_examples.md`
-
 ---
 
-### 04. Frequently Asked Questions
+### [04. Frequently Asked Questions](./04_faq.md)
 
 Answers to the most common questions about UiXTerm.
 
@@ -67,21 +59,15 @@ Topics include:
 - ANSI escape sequences
 - Best practices
 
-**File:** `04_faq.md`
-
 ---
 
-### 05. Roadmap
+### [05. Roadmap](./roadmap.md)
 
 Development plans for future versions of UiXTerm.
 
 Current roadmap:
 
-- Version 0.2.0
-- Version 0.3.0
 - Version 1.0.0
-
-**File:** `05_roadmap.md`
 
 ---
 
@@ -106,13 +92,16 @@ Package:
 
 `uixterm`
 
+
 Repository:
 
 https://github.com/ziterz/uixterm
 
+
 Package Page:
 
 https://pub.dev/packages/uixterm
+
 
 ---
 
@@ -122,4 +111,4 @@ UiXTerm is released under the MIT License.
 
 ---
 
-Happy coding!
+go coding !
