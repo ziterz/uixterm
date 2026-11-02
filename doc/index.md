@@ -8,7 +8,7 @@ UiXTerm provides an intuitive API for styling terminal output using ANSI escape 
 
 ## Documentation Index
 
-### 00. Introduction
+### [00. Introduction](./00_introduction.md)
 
 Learn what UiXTerm is, its goals, supported platforms, and the philosophy behind the project.
 
