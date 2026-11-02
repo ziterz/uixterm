@@ -16,14 +16,6 @@ v1.0.0
 ✓ Final documentation
 ✓ Stable API release
 
-Future
-the Ziterz Team ™ develop in Hevolx Ecosystem this advanced features:
+Future:
 
-- Terminal cursor control
-- Screen management
-- Input handling
-- Widgets
-- Layout system
-- Rendering engine
-- TUI components
-- Interactive terminal applications
+the Ziterz Team develop more features and enhance the current perform. 
